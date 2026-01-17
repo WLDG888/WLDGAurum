@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World Monster DeFi - モンスター育成、トークンスワップ、ステーキングが楽しめるDeFiアプリ">
+  <title>World Monster DeFi - World Appで開く</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* カスタムグラデーション背景 */
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      background-attachment: fixed;
+    }
+    
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    /* カスタムアニメーション */
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-2xl">
+    <!-- メインコンテンツ -->
+    <div class="backdrop-blur-lg bg-white/10 rounded-2xl shadow-xl border border-white/20 p-6 md:p-8 fade-in">
+      <!-- ヘッダー -->
+      <div class="text-center mb-8">
+        <div class="text-6xl mb-4">🐉</div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">WLDG Aurum</h1>
+        <p class="text-gray-200 text-lg">モンスター育成 × DeFiの世界へようこそ</p>
+      </div>
+
+      <!-- アプリ紹介セクション -->
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4 text-center">主な機能</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- モンスター育成 -->
+          <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-center">
+            <div class="text-4xl mb-2">🐉</div>
+            <h3 class="text-white font-semibold mb-2">モンスター育成</h3>
+            <p class="text-gray-300 text-sm">
+              モンスターを育成し、24時間ごとに報酬を獲得できます
+            </p>
+          </div>
+
+          <!-- Swap -->
+          <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-center">
+            <div class="text-4xl mb-2">💱</div>
+            <h3 class="text-white font-semibold mb-2">Swap</h3>
+            <p class="text-gray-300 text-sm">
+              PUFでWLDとWLDGを簡単に交換
+            </p>
+          </div>
+
+          <!-- Staking -->
+          <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-center">
+            <div class="text-4xl mb-2">💰</div>
+            <h3 class="text-white font-semibold mb-2">Staking</h3>
+            <p class="text-gray-300 text-sm">
+              WLDGトークンをステーキングして高利回りを獲得
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- World Appダウンロードセクション -->
+      <div class="mb-8 p-6 rounded-xl bg-blue-500/20 backdrop-blur-sm border-2 border-blue-500/50">
+        <h2 class="text-2xl font-bold text-white mb-4 text-center">World Appで始める</h2>
+        <p class="text-gray-200 text-center mb-6">
+          このアプリはWorld App内で動作します。<br>
+          まだダウンロードしていない方は、下記からダウンロードしてください。
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <!-- iOS ダウンロード -->
+          <a
+            href="https://worldcoin.org/join/ZM9HQ7B"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            iOS App Store
+          </a>
+
+          <!-- Android ダウンロード -->
+          <a
+            href="https://worldcoin.org/join/ZM9HQ7B"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+            </svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- アプリURL表示とコピーボタン -->
+      <div class="mb-6">
+        <h3 class="text-xl font-bold text-white mb-3 text-center">https://worldcoin.org/join/ZM9HQ7B</h3>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <input
+            type="text"
+            id="appUrl"
+            readonly
+            value=""
+            class="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            onclick="copyUrl()"
+            id="copyButton"
+            class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            📋 コピー
+          </button>
+        </div>
+        <p id="copyMessage" class="text-center text-green-300 text-sm mt-2 hidden">✅ コピーしました！</p>
+      </div>
+
+      <!-- 注意事項 -->
+      <div class="p-4 rounded-xl bg-yellow-500/20 backdrop-blur-sm border-2 border-yellow-500/50">
+        <div class="flex items-start">
+          <span class="text-2xl mr-3">⚠️</span>
+          <div>
+            <h4 class="text-yellow-400 font-semibold mb-2">ご注意</h4>
+            <ul class="text-yellow-300 text-sm space-y-1 list-disc list-inside">
+              <li>このアプリはWorld App内で動作します</li>
+              <li>World Appをダウンロードして、アプリ内からアクセスしてください</li>
+              <li>World ID認証が必要な機能があります</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <div class="text-center mt-6 text-white/80 text-sm">
+      <p>© 2025 WLDG Aurum
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // 現在のURLを取得して表示
+    window.addEventListener('DOMContentLoaded', () => {
+      const currentUrl = window.location.origin + window.location.pathname.replace('qr-landing.html', '');
+      document.getElementById('appUrl').value = currentUrl;
+    });
+
+    // URLコピー機能
+    function copyUrl() {
+      const urlInput = document.getElementById('appUrl');
+      const copyButton = document.getElementById('copyButton');
+      const copyMessage = document.getElementById('copyMessage');
+
+      // URLを選択してコピー
+      urlInput.select();
+      urlInput.setSelectionRange(0, 99999); // モバイル対応
+
+      try {
+        navigator.clipboard.writeText(urlInput.value).then(() => {
+          // コピー成功時のフィードバック
+          copyMessage.classList.remove('hidden');
+          copyButton.textContent = '✅ コピー済み';
+          copyButton.classList.add('opacity-75');
+
+          // 2秒後に元に戻す
+          setTimeout(() => {
+            copyMessage.classList.add('hidden');
+            copyButton.textContent = '📋 コピー';
+            copyButton.classList.remove('opacity-75');
+          }, 2000);
+        }).catch(() => {
+          // フォールバック: execCommandを使用
+          document.execCommand('copy');
+          copyMessage.classList.remove('hidden');
+          copyButton.textContent = '✅ コピー済み';
+
+          setTimeout(() => {
+            copyMessage.classList.add('hidden');
+            copyButton.textContent = '📋 コピー';
+          }, 2000);
+        });
+      } catch (err) {
+        console.error('コピーエラー:', err);
+        alert('URLを手動でコピーしてください: ' + urlInput.value);
+      }
+    }
+  </script>
+</body>
+</html>
