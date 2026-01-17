@@ -48,15 +48,24 @@ function App() {
         const minikit = new MiniKit();
         
         // World App内かどうかを確認
-        // window.parentが存在し、World Appコンテキスト内かどうか
-        const isInWorldApp = window.self !== window.top || 
-          (window as any).parent?.location?.hostname?.includes('world.org') ||
-          (window as any).WorldID !== undefined;
+        // より寛容なチェック: World App内では通常、親フレームが存在するか、特定のプロパティが存在する
+        const isInWorldApp = 
+          window.self !== window.top || // iframe内かどうか
+          (window as any).WorldID !== undefined || // World ID関連のグローバルオブジェクト
+          (window as any).parent?.location?.hostname?.includes('world.org') || // World.orgドメイン内か
+          navigator.userAgent.includes('WorldApp') || // User Agentチェック
+          window.location.search.includes('world_app=true'); // クエリパラメータチェック
 
-        if (!isInWorldApp) {
-          // World App外の場合はQRランディングページにリダイレクト
-          window.location.href = '/qr-landing.html';
-          return;
+        // 開発環境やVercelでは、チェックを緩和（本番のみ厳密にチェック）
+        const isProduction = import.meta.env.PROD;
+        
+        if (isProduction && !isInWorldApp) {
+          // 本番環境で、World App外の場合のみQRランディングページにリダイレクト
+          // ただし、既に /qr-landing.html にいる場合は無限ループを防ぐ
+          if (!window.location.pathname.includes('qr-landing.html')) {
+            window.location.href = '/qr-landing.html';
+            return;
+          }
         }
 
         setIsWorldApp(true);
